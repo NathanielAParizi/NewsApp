@@ -1,6 +1,6 @@
-package com.examples.coding.newsapp.datasource.remote
+package com.example.newsapp.datasource.remote
 
-import com.examples.coding.newsapp.model.news.NewsApiResponse
+import com.example.newsapp.model.news.NewsApiResponse
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -15,7 +15,7 @@ interface NewsApiService {
     fun getTopHeadlines(@Query(QUERY_PARAM_COUNTRY) country : String, @Header("Authorization") key : String)
             : Observable<NewsApiResponse>
 
-    @GET(PATH_TOP_HEADLINES)
+    @GET(PATH_HEADLINES_BY_CATEGORY)
     fun getTopHeadlinesByCategory(@Query(QUERY_PARAM_COUNTRY) country : String, @Query("category") category : String, @Header("Authorization") key : String)
             : Observable<NewsApiResponse>
 }

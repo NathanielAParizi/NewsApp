@@ -1,10 +1,8 @@
-package com.examples.coding.newsapp.model.news
-
+package com.example.newsapp.model.news
 
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 import android.os.Parcelable
-
 
 @Parcelize
 data class Source(

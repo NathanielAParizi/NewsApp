@@ -1,4 +1,4 @@
-package com.examples.coding.newsapp.datasource.remote
+package com.example.newsapp.datasource.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

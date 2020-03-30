@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="viewmodel"
-            type="com.example.newsapp.ViewModel.NewsListViewModel" />
+            type="com.example.newsapp.viewmodel.NewsListViewModel" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.MainActivity">
+        tools:context=".view.MainActivity"
+        android:background="@color/black">
 
         <TextView
             android:id="@+id/tvNewsCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:shadowColor="@color/colorAccent"
+            android:shadowDx="2"
+
+            android:shadowDy="1"
+            android:shadowRadius="3"
             android:text="Top Stories"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
             android:textSize="36sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvNewsList"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/rvNewsList"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvNewsList"
@@ -30,8 +40,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvNewsCategory"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
